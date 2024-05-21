@@ -27,7 +27,7 @@ class _MemoryPlayerPageState extends State<MemoryPlayerPage> {
   }
 
   void _setupDataSource() async {
-    var filePath = await Utils.getFileUrl(Constants.fileTestVideoUrl);
+    final filePath = await Utils.getFileUrl(Constants.fileTestVideoUrl);
     File file = File(filePath);
 
     List<int> bytes = file.readAsBytesSync().buffer.asUint8List();
